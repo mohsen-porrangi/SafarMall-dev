@@ -1,0 +1,191 @@
+services:
+  # SQL Server - Development optimizations
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: safarmall-sqlserver-dev
+    environment:
+      SA_PASSWORD: "SafarMall123!"
+      ACCEPT_EULA: "Y"
+      MSSQL_AGENT_ENABLED: true
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_dev_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P SafarMall123! -Q 'SELECT 1' -C"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    networks:
+      - safarmall-dev-network
+
+  # User Management Service - Development
+  usermanagement-api:
+    build:
+      context: .
+      dockerfile: src/Services/UserManagement/UserManagement.API/Dockerfile.dev
+    container_name: safarmall-usermanagement-dev
+    volumes:
+      # Mount source code for hot reload
+      - ./src/Services/UserManagement:/app/src/Services/UserManagement:rw
+      - /app/src/Services/UserManagement/bin
+      - /app/src/Services/UserManagement/obj
+      - ./src/BuildingBlocks:/app/src/BuildingBlocks:rw
+      - ./src/BuildingBlocks.Messaging:/app/src/BuildingBlocks.Messaging:rw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=DockerDev
+      - ASPNETCORE_URLS=http://+:8080
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=false
+      - DOTNET_WATCH_RESTART_ON_RUDE_EDIT=true
+      - ConnectionStrings__UserConnectionString=Server=sqlserver;Database=UserManagement_Dev;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Autentication__SecretKey=c8f92223-3ad0-4825-af46-beb76d3f50a6
+      - Autentication__Issuer=SimpleProject.AuthServer
+      - Autentication__Audience=SimpleProject.API
+      - WalletService__BaseAddress=http://walletpayment-api:8080
+    ports:
+      - "7070:8080"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - safarmall-dev-network
+    restart: unless-stopped
+
+  # Wallet Payment Service - Development
+  walletpayment-api:
+    build:
+      context: .
+      dockerfile: src/Services/WalletPayment/API/WalletPayment.API/Dockerfile.dev
+    container_name: safarmall-walletpayment-dev
+    volumes:
+      - ./src/Services/WalletPayment:/app/src/Services/WalletPayment:rw
+      - /app/src/Services/WalletPayment/bin
+      - /app/src/Services/WalletPayment/obj
+      - ./src/BuildingBlocks:/app/src/BuildingBlocks:rw
+      - ./src/BuildingBlocks.Messaging:/app/src/BuildingBlocks.Messaging:rw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=DockerDev
+      - ASPNETCORE_URLS=http://+:8080
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=false
+      - DOTNET_WATCH_RESTART_ON_RUDE_EDIT=true
+      - ConnectionStrings__WalletConnectionString=Server=sqlserver;Database=WalletPayment_Dev;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Autentication__SecretKey=c8f92223-3ad0-4825-af46-beb76d3f50a6
+      - Autentication__Issuer=SimpleProject.AuthServer
+      - Autentication__Audience=SimpleProject.API
+      - Fees__TransferFeeRate=0.005
+      - Fees__MinTransferFee=1000
+      - Fees__MaxTransferFee=50000
+    ports:
+      - "7241:8080"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - safarmall-dev-network
+    restart: unless-stopped
+
+  # Order Service - Development
+  order-api:
+    build:
+      context: .
+      dockerfile: src/Services/Order/API/Order.API/Dockerfile.dev
+    container_name: safarmall-order-dev
+    volumes:
+      - ./src/Services/Order:/app/src/Services/Order:rw
+      - /app/src/Services/Order/bin
+      - /app/src/Services/Order/obj
+      - ./src/BuildingBlocks:/app/src/BuildingBlocks:rw
+      - ./src/BuildingBlocks.Messaging:/app/src/BuildingBlocks.Messaging:rw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=DockerDev
+      - ASPNETCORE_URLS=http://+:8080
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=false
+      - DOTNET_WATCH_RESTART_ON_RUDE_EDIT=true
+      - ConnectionStrings__OrderConnectionString=Server=sqlserver;Database=OrderDB_Dev;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Jwt__Key=ThisIsMySecretKeyForJwtTokenGeneration
+      - Jwt__Issuer=AfaghSeir
+      - Jwt__Audience=AfaghSeirUsers
+      - ServiceUrls__UserManagement=http://usermanagement-api:8080
+      - ServiceUrls__WalletPayment=http://walletpayment-api:8080
+    ports:
+      - "60103:8080"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - safarmall-dev-network
+    restart: unless-stopped
+
+  # Payment Gateway Service - Development
+  paymentgateway-api:
+    build:
+      context: .
+      dockerfile: src/Services/PaymentGateway/PaymentGateway.API/Dockerfile.dev
+    container_name: safarmall-paymentgateway-dev
+    volumes:
+      - ./src/Services/PaymentGateway:/app/src/Services/PaymentGateway:rw
+      - /app/src/Services/PaymentGateway/bin
+      - /app/src/Services/PaymentGateway/obj
+      - ./src/BuildingBlocks:/app/src/BuildingBlocks:rw
+      - ./src/BuildingBlocks.Messaging:/app/src/BuildingBlocks.Messaging:rw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=DockerDev
+      - ASPNETCORE_URLS=http://+:8080
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=false
+      - DOTNET_WATCH_RESTART_ON_RUDE_EDIT=true
+      - ConnectionStrings__PaymentGatewayConnectionString=Server=sqlserver;Database=PaymentGateway_Dev;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Authentication__SecretKey=c8f92223-3ad0-4825-af46-beb76d3f50a6
+      - Authentication__Issuer=SimpleProject.AuthServer
+      - Authentication__Audience=SimpleProject.API
+      - PaymentGateways__Sandbox__IsEnabled=true
+      - PaymentGateways__Sandbox__AutoSuccess=true
+      - ExternalServices__WalletService__BaseUrl=http://walletpayment-api:8080
+    ports:
+      - "7002:8080"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - safarmall-dev-network
+    restart: unless-stopped
+
+  # API Gateway Service - Development
+  apigateway:
+    build:
+      context: .
+      dockerfile: src/Services/ApiGateways/YarpApiGateway/Dockerfile.dev
+    container_name: safarmall-apigateway-dev
+    volumes:
+      # Mount source code for hot reload
+      - ./src/Services/ApiGateways/YarpApiGateway:/app/src/Services/ApiGateways/YarpApiGateway:rw
+      - /app/src/Services/ApiGateways/YarpApiGateway/bin
+      - /app/src/Services/ApiGateways/YarpApiGateway/obj
+      - ./src/BuildingBlocks:/app/src/BuildingBlocks:rw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=DockerDev
+      - ASPNETCORE_URLS=http://+:8080
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=false
+      - DOTNET_WATCH_RESTART_ON_RUDE_EDIT=true
+    ports:
+      - "8080:8080"
+    depends_on:
+      - usermanagement-api
+      - walletpayment-api
+      - order-api
+      - paymentgateway-api
+    networks:
+      - safarmall-dev-network
+    restart: unless-stopped
+
+volumes:
+  sqlserver_dev_data:
+
+networks:
+  safarmall-dev-network:
+    driver: bridge
