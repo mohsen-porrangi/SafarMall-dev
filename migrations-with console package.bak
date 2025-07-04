@@ -1,0 +1,15 @@
+# برای UserManagement
+Add-Migration InitialCreate -Project src\Services\UserManagement\UserManagement.API -StartupProject src\Services\UserManagement\UserManagement.API
+Update-Database -Project src\Services\UserManagement\UserManagement.API -StartupProject src\Services\UserManagement\UserManagement.API
+
+# برای WalletPayment
+Add-Migration InitialCreate -Project src\Services\WalletPayment\Infrastructure -StartupProject src\Services\WalletPayment\API\WalletPayment.API
+Update-Database -Project src\Services\WalletPayment\Infrastructure -StartupProject src\Services\WalletPayment\API\WalletPayment.API
+
+# برای Order
+Add-Migration InitialCreate -Project src\Services\Order\Infrastructure -StartupProject src\Services\Order\API\Order.API
+Update-Database -Project src\Services\Order\Infrastructure -StartupProject src\Services\Order\API\Order.API
+
+# برای PaymentGateway
+Add-Migration InitialCreate -Project src\Services\PaymentGateway\PaymentGateway.API -StartupProject src\Services\PaymentGateway\PaymentGateway.API
+Update-Database -Project src\Services\PaymentGateway\PaymentGateway.API -StartupProject src\Services\PaymentGateway\PaymentGateway.API

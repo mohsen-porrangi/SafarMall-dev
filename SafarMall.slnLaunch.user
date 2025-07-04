@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "UserWallet",
+    "Projects": [
+      {
+        "Path": "src\\Services\\UserManagement\\UserManagement.API\\UserManagement.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\WalletApp\\API\\WalletApp.API\\WalletApp.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "WalletPayment",
+    "Projects": [
+      {
+        "Path": "src\\Services\\WalletApp\\API\\WalletApp.API\\WalletApp.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\PaymentGateway\\PaymentGateway.API\\PaymentGateway.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

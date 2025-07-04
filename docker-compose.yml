@@ -1,0 +1,194 @@
+services:
+  # SQL Server Database
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: safarmall-sqlserver
+    environment:
+      SA_PASSWORD: "SafarMall123!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P SafarMall123! -Q 'SELECT 1' -C"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - safarmall-network
+
+  # API Gateway Service
+  apigateway:
+    build:
+      context: .
+      dockerfile: src/Services/ApiGateways/YarpApiGateway/Dockerfile
+    container_name: safarmall-apigateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SafarMall123!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    ports:
+      - "8080:8080"   # HTTP
+      - "8081:8081"   # HTTPS
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      - usermanagement-api
+      - walletpayment-api
+      - order-api
+      - paymentgateway-api
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-k", "https://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - safarmall-network
+
+  # User Management Service
+  usermanagement-api:
+    build:
+      context: .
+      dockerfile: src/Services/UserManagement/UserManagement.API/Dockerfile
+    container_name: safarmall-usermanagement
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SafarMall123!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__UserConnectionString=Server=sqlserver;Database=UserManagement;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Autentication__SecretKey=c8f92223-3ad0-4825-af46-beb76d3f50a6
+      - Autentication__Issuer=SimpleProject.AuthServer
+      - Autentication__Audience=SimpleProject.API
+      - WalletService__BaseAddress=https://walletpayment-api:8081
+    ports:
+      - "7072:8081"
+      - "7070:8080"
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-k", "https://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - safarmall-network
+
+  # Wallet Payment Service
+  walletpayment-api:
+    build:
+      context: .
+      dockerfile: src/Services/WalletPayment/API/WalletPayment.API/Dockerfile
+    container_name: safarmall-walletpayment
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SafarMall123!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__WalletConnectionString=Server=sqlserver;Database=WalletPayment;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Autentication__SecretKey=c8f92223-3ad0-4825-af46-beb76d3f50a6
+      - Autentication__Issuer=SimpleProject.AuthServer
+      - Autentication__Audience=SimpleProject.API
+      - Fees__TransferFeeRate=0.005
+      - Fees__MinTransferFee=1000
+      - Fees__MaxTransferFee=50000
+    ports:
+      - "7240:8081"
+      - "7241:8080"
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-k", "https://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - safarmall-network
+
+  # Order Service
+  order-api:
+    build:
+      context: .
+      dockerfile: src/Services/Order/API/Order.API/Dockerfile
+    container_name: safarmall-order
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SafarMall123!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__OrderConnectionString=Server=sqlserver;Database=OrderDB;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Jwt__Key=ThisIsMySecretKeyForJwtTokenGeneration
+      - Jwt__Issuer=AfaghSeir
+      - Jwt__Audience=AfaghSeirUsers
+      - ServiceUrls__UserManagement=https://usermanagement-api:8081
+      - ServiceUrls__WalletPayment=https://walletpayment-api:8081
+    ports:
+      - "60102:8081"
+      - "60103:8080"
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-k", "https://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - safarmall-network
+
+  # Payment Gateway Service
+  paymentgateway-api:
+    build:
+      context: .
+      dockerfile: src/Services/PaymentGateway/PaymentGateway.API/Dockerfile
+    container_name: safarmall-paymentgateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=SafarMall123!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__PaymentGatewayConnectionString=Server=sqlserver;Database=PaymentGateway;User Id=sa;Password=SafarMall123!;TrustServerCertificate=true;
+      - Authentication__SecretKey=c8f92223-3ad0-4825-af46-beb76d3f50a6
+      - Authentication__Issuer=SimpleProject.AuthServer
+      - Authentication__Audience=SimpleProject.API
+      - PaymentGateways__Sandbox__IsEnabled=true
+      - PaymentGateways__Sandbox__AutoSuccess=true
+      - ExternalServices__WalletService__BaseUrl=https://walletpayment-api:8081
+    ports:
+      - "7001:8081"
+      - "7002:8080"
+    volumes:
+      - ./certs:/https:ro
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-k", "https://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - safarmall-network
+
+volumes:
+  sqlserver_data:
+
+networks:
+  safarmall-network:
+    driver: bridge

@@ -1,0 +1,35 @@
+[
+  {
+    "Name": "Train",
+    "Projects": [
+      {
+        "Path": "src\\Services\\UserManagement\\UserManagement.API\\UserManagement.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\Order\\API\\Order.API\\Order.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\Train\\Train.API\\Train.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\ApiGateways\\YarpApiGateway\\YarpApiGateway.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\SMS\\SMS.API\\SMS.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\WalletApp\\API\\WalletApp.API\\WalletApp.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Services\\PaymentGateway\\PaymentGateway.API\\PaymentGateway.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
