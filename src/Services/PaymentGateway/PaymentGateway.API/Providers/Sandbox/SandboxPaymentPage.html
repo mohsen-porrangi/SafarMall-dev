@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درگاه پرداخت تستی</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .payment-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .payment-header {
+            margin-bottom: 2rem;
+        }
+        
+        .payment-title {
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-subtitle {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .payment-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .payment-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .payment-reference {
+            color: #888;
+            font-size: 0.8rem;
+            font-family: monospace;
+        }
+        
+        .payment-actions {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .security-note {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            color: #856404;
+            font-size: 0.8rem;
+        }
+        
+        .loading {
+            display: none;
+            margin: 1rem 0;
+        }
+        
+        .loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-header">
+            <h1 class="payment-title">🔒 درگاه پرداخت تستی</h1>
+            <p class="payment-subtitle">محیط آزمایشی پرداخت</p>
+        </div>
+        
+        <div class="payment-info">
+            <div class="payment-amount" id="amount">{{AMOUNT}} ریال</div>
+            <div class="payment-description" id="description">{{DESCRIPTION}}</div>
+            <div class="payment-reference">شناسه: {{REFERENCE}}</div>
+        </div>
+        
+        <div class="payment-actions">
+            <button class="btn btn-success" onclick="processPayment('success')">
+                پرداخت موفق
+            </button>
+            <button class="btn btn-danger" onclick="processPayment('failed')">
+                 پرداخت ناموفق
+            </button>
+            <button class="btn btn-secondary" onclick="processPayment('cancel')">
+                🚫 لغو پرداخت
+            </button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>در حال پردازش...</p>
+        </div>
+        
+        <div class="security-note">
+            <strong>توجه:</strong> این درگاه فقط برای آزمایش است و هیچ تراکنش واقعی انجام نمی‌شود.
+        </div>
+    </div>
+
+    <script>
+        function processPayment(status) {
+            const loading = document.getElementById('loading');
+            const actions = document.querySelector('.payment-actions');
+            
+            // Show loading
+            loading.style.display = 'block';
+            actions.style.display = 'none';
+            
+            // Simulate processing delay
+            setTimeout(() => {
+                const reference = '{{REFERENCE}}';
+                const callbackUrl = '{{CALLBACK_URL}}';
+                
+                let params = new URLSearchParams({
+                    Authority: reference,
+                    Status: status === 'success' ? 'OK' : (status === 'failed' ? 'NOK' : 'CANCEL')
+                });
+                
+                if (status === 'success') {
+                    params.append('Amount', '{{AMOUNT}}');
+                }
+                
+                // Redirect to callback
+                window.location.href = `${callbackUrl}?${params.toString()}`;
+            }, 2000);
+        }
+        
+        // Format amount with separators
+        document.addEventListener('DOMContentLoaded', function() {
+            const amountElement = document.getElementById('amount');
+            const amount = '{{AMOUNT}}';
+            const formattedAmount = new Intl.NumberFormat('fa-IR').format(amount);
+            amountElement.textContent = `${formattedAmount} ریال`;
+        });
+        
+        // Auto-expire after 30 minutes
+        setTimeout(() => {
+            alert('زمان پرداخت به پایان رسیده است');
+            processPayment('cancel');
+        }, 30 * 60 * 1000);
+    </script>
+</body>
+</html>

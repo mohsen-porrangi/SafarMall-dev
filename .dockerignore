@@ -1,0 +1,111 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+
+# Docker
+.docker/
+docker-compose*
+Dockerfile*
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+[Ll]og/
+x64/
+x86/
+[Bb]ld/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# Configuration, cache and debug
+*.cache
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+*.sln.docstates
+*.snk
+
+# ReSharper + Rider + CodeMap
+.idea/
+*.DotSettings.user
+*.sln.ide
+*.dotCover
+*.dotTrace
+*.dotMemory
+*.ncrunch*
+*.crunch*
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.VisualState.xml
+
+# Publish Output
+publish/
+*.publish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+*.PublishSettings
+*.build.csdef
+
+# SQL Server
+*.mdf
+*.ldf
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Node.js / Frontend
+node_modules/
+bower_components/
+typings/
+dist/
+.sass-cache/
+.env
+.env.*
+
+# Temporary files
+~$*
+*~
+*.tmp
+
+# Entity Framework
+#Migrations/
+
+# EF Tools cache
+*.efcache
+
+# Rider
+.idea/
+
+# dotnet watch fix - prevent tracking of `.csproj.user` files (important)
+**/*.csproj.user
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+lcov-report/

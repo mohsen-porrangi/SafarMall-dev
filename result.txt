@@ -1,0 +1,1311 @@
+C:\Users\Administrator\Desktop\Source\SafarMall>migrations.bat
+=== Migrating UserManagement ===
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj'.
+Writing 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\obj\UserManagement.API.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmphwcrl2.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmp4rhmhi.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\InMemory\InMemoryMessageBus.cs(53,23): warning CS8600: Converting null literal or possible null value to non-nullable type. [C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\InMemory\InMemoryMessageBus.cs(53,23): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(84,40): warning CS8765: Nullability of type of parameter 'node' doesn't match overridden member (possibly because of nullability attributes). [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Services\UserManagementService.cs(25,20): warning CS8603: Possible null reference return. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Common\JwtTokenService.cs(10,97): warning CS9113: Parameter 'config' is unread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Common\OtpService.cs(19,9): warning CS0162: Unreachable code detected [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UserRepository.cs(5,96): warning CS9107: Parameter 'UserDbContext context' is captured into the state of the enclosing type and its value is also passed to the base constructor. The value might be captured by the base class as well. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\AppDbContext.cs(27,46): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(13,51): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(16,51): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(39,17): warning CS8604: Possible null reference argument for parameter 'Name' in 'UserDto.UserDto(Guid Id, string Name, string Family, string Email, string? Mobile, bool IsActive, string? NationalCode)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(40,17): warning CS8604: Possible null reference argument for parameter 'Family' in 'UserDto.UserDto(Guid Id, string Name, string Family, string Email, string? Mobile, bool IsActive, string? NationalCode)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(41,17): warning CS8604: Possible null reference argument for parameter 'Email' in 'UserDto.UserDto(Guid Id, string Name, string Family, string Email, string? Mobile, bool IsActive, string? NationalCode)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UnitOfWork.cs(14,35): warning CS8618: Non-nullable field '_currentTransaction' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UserDbContext.cs(26,46): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UnitOfWork.cs(85,39): warning CS8625: Cannot convert null literal to non-nullable reference type. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UnitOfWork.cs(96,35): warning CS8625: Cannot convert null literal to non-nullable reference type. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+
+Build succeeded.
+
+C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\InMemory\InMemoryMessageBus.cs(53,23): warning CS8600: Converting null literal or possible null value to non-nullable type. [C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\InMemory\InMemoryMessageBus.cs(53,23): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\BuildingBlocks.Messaging\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(84,40): warning CS8765: Nullability of type of parameter 'node' doesn't match overridden member (possibly because of nullability attributes). [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Services\UserManagementService.cs(25,20): warning CS8603: Possible null reference return. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Common\JwtTokenService.cs(10,97): warning CS9113: Parameter 'config' is unread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Common\OtpService.cs(19,9): warning CS0162: Unreachable code detected [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UserRepository.cs(5,96): warning CS9107: Parameter 'UserDbContext context' is captured into the state of the enclosing type and its value is also passed to the base constructor. The value might be captured by the base class as well. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\AppDbContext.cs(27,46): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(13,51): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(16,51): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(39,17): warning CS8604: Possible null reference argument for parameter 'Name' in 'UserDto.UserDto(Guid Id, string Name, string Family, string Email, string? Mobile, bool IsActive, string? NationalCode)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(40,17): warning CS8604: Possible null reference argument for parameter 'Family' in 'UserDto.UserDto(Guid Id, string Name, string Family, string Email, string? Mobile, bool IsActive, string? NationalCode)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Endpoints\Admin\GetUserByCondition\GetUserByConditionHandler.cs(41,17): warning CS8604: Possible null reference argument for parameter 'Email' in 'UserDto.UserDto(Guid Id, string Name, string Family, string Email, string? Mobile, bool IsActive, string? NationalCode)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UnitOfWork.cs(14,35): warning CS8618: Non-nullable field '_currentTransaction' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UserDbContext.cs(26,46): warning CS8602: Dereference of a possibly null reference. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UnitOfWork.cs(85,39): warning CS8625: Cannot convert null literal to non-nullable reference type. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\Infrastructure\Data\UnitOfWork.cs(96,35): warning CS8625: Cannot convert null literal to non-nullable reference type. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj]
+    17 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:22.44
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll migrations add InitialCreate --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\ --root-namespace UserManagement.API --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'UserManagement.API'.
+Using startup assembly 'UserManagement.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API'.
+Using root namespace 'UserManagement.API'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'AppDbContext'.
+Found DbContext 'UserDbContext'.
+Finding application service provider in assembly 'UserManagement.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 0 handler types in UserManagement.API
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Microsoft.EntityFrameworkCore.Design.OperationException: More than one DbContext was found. Specify which one to use. Use the '-Context' parameter for PowerShell commands and the '--context' parameter for dotnet commands.
+   at Microsoft.EntityFrameworkCore.Design.Internal.DbContextOperations.FindContextType(String name)
+   at Microsoft.EntityFrameworkCore.Design.Internal.DbContextOperations.CreateContext(String contextType)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.AddMigration(String name, String outputDir, String contextType, String namespace, Boolean dryRun)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.AddMigrationImpl(String name, String outputDir, String contextType, String namespace, Boolean dryRun)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.AddMigration.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.<>c__DisplayClass3_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+More than one DbContext was found. Specify which one to use. Use the '-Context' parameter for PowerShell commands and the '--context' parameter for dotnet commands.
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj'.
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpxki4hz.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpb5is4j.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.32
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll database update --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0\UserManagement.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\UserManagement.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\ --root-namespace UserManagement.API --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'UserManagement.API'.
+Using startup assembly 'UserManagement.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API'.
+Using root namespace 'UserManagement.API'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\UserManagement\UserManagement.API\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'AppDbContext'.
+Found DbContext 'UserDbContext'.
+Finding application service provider in assembly 'UserManagement.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 0 handler types in UserManagement.API
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Microsoft.EntityFrameworkCore.Design.OperationException: More than one DbContext was found. Specify which one to use. Use the '-Context' parameter for PowerShell commands and the '--context' parameter for dotnet commands.
+   at Microsoft.EntityFrameworkCore.Design.Internal.DbContextOperations.FindContextType(String name)
+   at Microsoft.EntityFrameworkCore.Design.Internal.DbContextOperations.CreateContext(String contextType)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+More than one DbContext was found. Specify which one to use. Use the '-Context' parameter for PowerShell commands and the '--context' parameter for dotnet commands.
+=== Migrating WalletPayment ===
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\WalletPayment.Infrastructure.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj'.
+Writing 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\obj\WalletPayment.Infrastructure.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpytijv3.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\WalletPayment.Infrastructure.csproj
+Writing 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\obj\WalletPayment.API.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmp1kldgt.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Core\Domain\Aggregates\TransactionAggregate\TransactionSnapshot.cs(21,13): warning CS8618: Non-nullable property 'Balance' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Core\Domain\WalletPayment.Domain.csproj]
+
+Build succeeded.
+
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Core\Domain\Aggregates\TransactionAggregate\TransactionSnapshot.cs(21,13): warning CS8618: Non-nullable property 'Balance' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Core\Domain\WalletPayment.Domain.csproj]
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:10.38
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll migrations add InitialCreate --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.Infrastructure.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\WalletPayment.Infrastructure.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\ --root-namespace WalletPayment.Infrastructure --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'WalletPayment.Infrastructure'.
+Using startup assembly 'WalletPayment.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API'.
+Using root namespace 'WalletPayment.Infrastructure'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'WalletDbContext'.
+Finding application service provider in assembly 'WalletPayment.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 0 handler types in WalletPayment.API
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Using context 'WalletDbContext'.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10625]
+      The foreign key property 'Credit.WalletId1' was created in shadow state because a conflicting property with the simple name 'WalletId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[20601]
+      The 'TransactionStatus' property 'Status' on entity type 'Transaction' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'TransactionStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[20601]
+      The 'CreditStatus' property 'Status' on entity type 'Credit' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'CreditStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+Finding design-time services referenced by assembly 'WalletPayment.API'...
+Finding design-time services referenced by assembly 'WalletPayment.Infrastructure'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding IDesignTimeServices implementations in assembly 'WalletPayment.API'...
+No design-time services were found.
+Writing migration to 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\Migrations\20250609095001_InitialCreate.cs'.
+Writing model snapshot to 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\Migrations\WalletDbContextModelSnapshot.cs'.
+Done. To undo this action, use 'ef migrations remove'
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\WalletPayment.Infrastructure.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj'.
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpyyg44h.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\WalletPayment.Infrastructure.csproj
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpcq1i3s.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.12
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll database update --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.Infrastructure.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\WalletPayment.Infrastructure.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0\WalletPayment.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\WalletPayment.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\ --root-namespace WalletPayment.Infrastructure --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'WalletPayment.Infrastructure'.
+Using startup assembly 'WalletPayment.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\API\WalletPayment.API'.
+Using root namespace 'WalletPayment.Infrastructure'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\WalletPayment\Infrastructure\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'WalletDbContext'.
+Finding application service provider in assembly 'WalletPayment.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 0 handler types in WalletPayment.API
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Using context 'WalletDbContext'.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10625]
+      The foreign key property 'Credit.WalletId1' was created in shadow state because a conflicting property with the simple name 'WalletId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[20601]
+      The 'TransactionStatus' property 'Status' on entity type 'Transaction' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'TransactionStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[20601]
+      The 'CreditStatus' property 'Status' on entity type 'Credit' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'CreditStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+Finding design-time services referenced by assembly 'WalletPayment.API'...
+Finding design-time services referenced by assembly 'WalletPayment.Infrastructure'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding IDesignTimeServices implementations in assembly 'WalletPayment.API'...
+No design-time services were found.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (499ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      CREATE DATABASE [WalletPayment];
+Executed DbCommand (499ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [WalletPayment];
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (259ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [WalletPayment] SET READ_COMMITTED_SNAPSHOT ON;
+      END;
+Executed DbCommand (259ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [WalletPayment] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+info: Microsoft.EntityFrameworkCore.Migrations[20411]
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DECLARE @result int;
+      EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+      SELECT @result
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+infoExecuted DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+      BEGIN
+          CREATE TABLE [__EFMigrationsHistory] (
+              [MigrationId] nvarchar(150) NOT NULL,
+              [ProductVersion] nvarchar(32) NOT NULL,
+              CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+          );
+      END;
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+infoExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+
+infoExecuted DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20250609095001_InitialCreate'.
+Applying migration '20250609095001_InitialCreate'.
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF SCHEMA_ID(N'wallet') IS NULL EXEC(N'CREATE SCHEMA [wallet];');info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      IF SCHEMA_ID(N'wallet') IS NULL EXEC(N'CREATE SCHEMA [wallet];');
+
+Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [wallet].[TransactionSnapshots] (
+    [Id] bigint NOT NULL IDENTITY,
+    [AccountId] uniqueidentifier NOT NULL,
+    [Balance] decimal(18,2) NOT NULL,
+    [Currency] int NOT NULL,
+    [SnapshotDate] datetime2(7) NOT NULL,
+    [Type] int NOT NULL,
+    [TransactionId] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_TransactionSnapshots] PRIMARY KEY ([Id])
+);
+DECLARE @description AS sql_variant;
+SET @description = N'Currency account ID';
+EXEC sp_addextendedproperty 'MS_Description', @description, 'SCHEMA', N'wallet', 'TABLE', N'TransactionSnapshots', 'COLUMN', N'AccountId';
+SET @description = N'Optional link to specific transaction';
+EXEC sp_addextendedproperty 'MS_Description', @description, 'SCHEMA', N'wallet', 'TABLE', N'TransactionSnapshots', 'COLUMN', N'TransactionId';info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [wallet].[TransactionSnapshots] (
+          [Id] bigint NOT NULL IDENTITY,
+          [AccountId] uniqueidentifier NOT NULL,
+          [Balance] decimal(18,2) NOT NULL,
+          [Currency] int NOT NULL,
+          [SnapshotDate] datetime2(7) NOT NULL,
+          [Type] int NOT NULL,
+          [TransactionId] uniqueidentifier NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          CONSTRAINT [PK_TransactionSnapshots] PRIMARY KEY ([Id])
+      );
+      DECLARE @description AS sql_variant;
+      SET @description = N'Currency account ID';
+      EXEC sp_addextendedproperty 'MS_Description', @description, 'SCHEMA', N'wallet', 'TABLE', N'TransactionSnapshots', 'COLUMN', N'AccountId';
+      SET @description = N'Optional link to specific transaction';
+      EXEC sp_addextendedproperty 'MS_Description', @description, 'SCHEMA', N'wallet', 'TABLE', N'TransactionSnapshots', 'COLUMN', N'TransactionId';
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [wallet].[Wallets] (
+          [Id] uniqueidentifier NOT NULL,
+          [UserId] uniqueidentifier NOT NULL,
+          [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+          [CreatedAt] datetime2(7) NOT NULL,
+          [UpdatedAt] datetime2(7) NOT NULL,
+          [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+          CONSTRAINT [PK_Wallets] PRIMARY KEY ([Id])
+      );
+      DECLARE @description1 AS sql_variant;
+      SET @description1 = N'User who owns this wallet';
+      EXEC sp_addextendedproperty 'MS_Description', @description1, 'SCHEMA', N'wallet', 'TABLE', N'Wallets', 'COLUMN', N'UserId';
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [wallet].[Wallets] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    [CreatedAt] datetime2(7) NOT NULL,
+    [UpdatedAt] datetime2(7) NOT NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Wallets] PRIMARY KEY ([Id])
+);
+DECLARE @description1 AS sql_variant;
+SET @description1 = N'User who owns this wallet';
+EXEC sp_addextendedproperty 'MS_Description', @description1, 'SCHEMA', N'wallet', 'TABLE', N'Wallets', 'COLUMN', N'UserId';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [wallet].[BankAccounts] (
+          [Id] uniqueidentifier NOT NULL,
+          [WalletId] uniqueidentifier NOT NULL,
+          [BankName] nvarchar(100) NOT NULL,
+          [AccountNumber] nvarchar(20) NOT NULL,
+          [CardNumber] nvarchar(16) NULL,
+          [ShabaNumber] nvarchar(26) NULL,
+          [AccountHolderName] nvarchar(200) NULL,
+          [IsVerified] bit NOT NULL DEFAULT CAST(0 AS bit),
+          [IsDefault] bit NOT NULL DEFAULT CAST(0 AS bit),
+          [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+          [CreatedAt] datetime2(7) NOT NULL,
+          [UpdatedAt] datetime2(7) NOT NULL,
+          [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+          CONSTRAINT [PK_BankAccounts] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_BankAccounts_Wallets_WalletId] FOREIGN KEY ([WalletId]) REFERENCES [wallet].[Wallets] ([Id]) ON DELETE CASCADE
+      );
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [wallet].[BankAccounts] (
+    [Id] uniqueidentifier NOT NULL,
+    [WalletId] uniqueidentifier NOT NULL,
+    [BankName] nvarchar(100) NOT NULL,
+    [AccountNumber] nvarchar(20) NOT NULL,
+    [CardNumber] nvarchar(16) NULL,
+    [ShabaNumber] nvarchar(26) NULL,
+    [AccountHolderName] nvarchar(200) NULL,
+    [IsVerified] bit NOT NULL DEFAULT CAST(0 AS bit),
+    [IsDefault] bit NOT NULL DEFAULT CAST(0 AS bit),
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    [CreatedAt] datetime2(7) NOT NULL,
+    [UpdatedAt] datetime2(7) NOT NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_BankAccounts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_BankAccounts_Wallets_WalletId] FOREIGN KEY ([WalletId]) REFERENCES [wallet].[Wallets] ([Id]) ON DELETE CASCADE
+);
+failFailed executing DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [wallet].[Credits] (
+    [Id] uniqueidentifier NOT NULL,
+    [WalletId] uniqueidentifier NOT NULL,
+    [CreditLimit] decimal(18,2) NOT NULL,
+    [CreditLimitCurrency] int NOT NULL,
+    [UsedCredit] decimal(18,2) NOT NULL,
+    [UsedCreditCurrency] int NOT NULL,
+    [GrantedDate] datetime2(7) NOT NULL,
+    [DueDate] datetime2(7) NOT NULL,
+    [SettledDate] datetime2(7) NULL,
+    [Status] int NOT NULL DEFAULT 1,
+    [Description] nvarchar(500) NOT NULL,
+    [SettlementTransactionId] uniqueidentifier NULL,
+    [WalletId1] uniqueidentifier NOT NULL,
+    [CreatedAt] datetime2(7) NOT NULL,
+    [UpdatedAt] datetime2(7) NOT NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Credits] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Credits_Wallets_WalletId] FOREIGN KEY ([WalletId]) REFERENCES [wallet].[Wallets] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Credits_Wallets_WalletId1] FOREIGN KEY ([WalletId1]) REFERENCES [wallet].[Wallets] ([Id]) ON DELETE CASCADE
+);: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [wallet].[Credits] (
+          [Id] uniqueidentifier NOT NULL,
+          [WalletId] uniqueidentifier NOT NULL,
+          [CreditLimit] decimal(18,2) NOT NULL,
+          [CreditLimitCurrency] int NOT NULL,
+          [UsedCredit] decimal(18,2) NOT NULL,
+          [UsedCreditCurrency] int NOT NULL,
+          [GrantedDate] datetime2(7) NOT NULL,
+          [DueDate] datetime2(7) NOT NULL,
+          [SettledDate] datetime2(7) NULL,
+          [Status] int NOT NULL DEFAULT 1,
+          [Description] nvarchar(500) NOT NULL,
+          [SettlementTransactionId] uniqueidentifier NULL,
+          [WalletId1] uniqueidentifier NOT NULL,
+          [CreatedAt] datetime2(7) NOT NULL,
+          [UpdatedAt] datetime2(7) NOT NULL,
+          [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+          CONSTRAINT [PK_Credits] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_Credits_Wallets_WalletId] FOREIGN KEY ([WalletId]) REFERENCES [wallet].[Wallets] ([Id]) ON DELETE CASCADE,
+          CONSTRAINT [FK_Credits_Wallets_WalletId1] FOREIGN KEY ([WalletId1]) REFERENCES [wallet].[Wallets] ([Id]) ON DELETE CASCADE
+      );
+
+Microsoft.Data.SqlClient.SqlException (0x80131904): Introducing FOREIGN KEY constraint 'FK_Credits_Wallets_WalletId1' on table 'Credits' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.
+Could not create constraint or index. See previous errors.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.Execute(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.<>c.<ExecuteNonQuery>b__3_1(DbContext _, ValueTuple`6 s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean commitTransaction, Nullable`1 isolationLevel)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementation(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c.<Migrate>b__20_1(DbContext c, ValueTuple`4 s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:dc11d071-c8c4-469b-b567-1e4ec9a935b6
+Error Number:1785,State:0,Class:16
+Introducing FOREIGN KEY constraint 'FK_Credits_Wallets_WalletId1' on table 'Credits' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.
+Could not create constraint or index. See previous errors.
+=== Migrating Order ===
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj'.
+Writing 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\obj\Order.Infrastructure.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpb4du4f.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj
+Writing 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\obj\Order.API.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmp1ypht4.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\EventHandlers\OrderCreatedEventHandler..cs(19,13): warning CS8604: Possible null reference argument for parameter 'orderNumber' in 'OrderSubmittedIntegrationEvent.OrderSubmittedIntegrationEvent(Guid orderId, Guid userId, decimal amount, ServiceType serviceType, string orderNumber)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Common\Behaviors\TransactionBehavior.cs(11,21): warning CS9113: Parameter 'dbContext' is unread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Orders\Services\OrderProcessingService.cs(22,27): warning CS9113: Parameter 'walletPaymentService' is unread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Orders\Queries\GetOrderById\GetOrderByIdQueryHandler.cs(209,34): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Services\TicketService.cs(7,31): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(11,48): warning CS9124: Parameter 'HttpClient httpClient' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(12,41): warning CS9124: Parameter 'ILogger logger' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Data\Repositories\OrderRepository.cs(9,67): warning CS9107: Parameter 'OrderDbContext context' is captured into the state of the enclosing type and its value is also passed to the base constructor. The value might be captured by the base class as well. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Internal\Orders\UpdateOrderStatusInternalEndpoint.cs(15,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(58,48): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(62,45): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(74,30): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(30,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(31,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(32,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+
+Build succeeded.
+
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\EventHandlers\OrderCreatedEventHandler..cs(19,13): warning CS8604: Possible null reference argument for parameter 'orderNumber' in 'OrderSubmittedIntegrationEvent.OrderSubmittedIntegrationEvent(Guid orderId, Guid userId, decimal amount, ServiceType serviceType, string orderNumber)'. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Common\Behaviors\TransactionBehavior.cs(11,21): warning CS9113: Parameter 'dbContext' is unread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Orders\Services\OrderProcessingService.cs(22,27): warning CS9113: Parameter 'walletPaymentService' is unread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Orders\Queries\GetOrderById\GetOrderByIdQueryHandler.cs(209,34): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Core\Application\Order.Application.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Services\TicketService.cs(7,31): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(11,48): warning CS9124: Parameter 'HttpClient httpClient' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(12,41): warning CS9124: Parameter 'ILogger logger' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Data\Repositories\OrderRepository.cs(9,67): warning CS9107: Parameter 'OrderDbContext context' is captured into the state of the enclosing type and its value is also passed to the base constructor. The value might be captured by the base class as well. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Internal\Orders\UpdateOrderStatusInternalEndpoint.cs(15,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(58,48): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(62,45): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(74,30): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(30,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(31,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(32,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+    15 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:05.81
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll migrations add InitialCreate --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.Infrastructure.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ --root-namespace Order.Infrastructure --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'Order.Infrastructure'.
+Using startup assembly 'Order.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API'.
+Using root namespace 'Order.Infrastructure'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'OrderDbContext'.
+Finding application service provider in assembly 'Order.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 4 handler types in Order.Application
+Registering: PaymentProcessedIntegrationEvent -> PaymentProcessedIntegrationEventHandler
+Registering: OrderCreatedEvent -> OrderCreatedEventHandler
+Registering: PaymentCompletedEvent -> PaymentCompletedEventHandler
+Registering: WalletChargedEvent -> WalletChargedEventHandler
+Added EventHandlerRegistrationService
+Found 4 handler types in Order.Application
+Skipping duplicate: PaymentProcessedIntegrationEvent -> PaymentProcessedIntegrationEventHandler
+Skipping duplicate: OrderCreatedEvent -> OrderCreatedEventHandler
+Skipping duplicate: PaymentCompletedEvent -> PaymentCompletedEventHandler
+Skipping duplicate: WalletChargedEvent -> WalletChargedEventHandler
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Using context 'OrderDbContext'.
+Finding design-time services referenced by assembly 'Order.API'...
+Finding design-time services referenced by assembly 'Order.Infrastructure'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding IDesignTimeServices implementations in assembly 'Order.API'...
+No design-time services were found.
+Writing migration to 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Migrations\20250609095026_InitialCreate.cs'.
+Writing model snapshot to 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Migrations\OrderDbContextModelSnapshot.cs'.
+Done. To undo this action, use 'ef migrations remove'
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj'.
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpojsd05.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpmw0wsx.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Services\TicketService.cs(7,31): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Data\Repositories\OrderRepository.cs(9,67): warning CS9107: Parameter 'OrderDbContext context' is captured into the state of the enclosing type and its value is also passed to the base constructor. The value might be captured by the base class as well. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(11,48): warning CS9124: Parameter 'HttpClient httpClient' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(12,41): warning CS9124: Parameter 'ILogger logger' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Internal\Orders\UpdateOrderStatusInternalEndpoint.cs(15,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(58,48): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(62,45): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(74,30): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(30,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(31,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(32,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+
+Build succeeded.
+
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Services\TicketService.cs(7,31): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Data\Repositories\OrderRepository.cs(9,67): warning CS9107: Parameter 'OrderDbContext context' is captured into the state of the enclosing type and its value is also passed to the base constructor. The value might be captured by the base class as well. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(11,48): warning CS9124: Parameter 'HttpClient httpClient' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ExternalServices\Common\BaseHttpClient.cs(12,41): warning CS9124: Parameter 'ILogger logger' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Internal\Orders\UpdateOrderStatusInternalEndpoint.cs(15,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(58,48): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(62,45): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(74,30): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(30,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(31,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Endpoints\Orders\GetUserOrdersEndpoint.cs(32,17): warning ASP0019: Use IHeaderDictionary.Append or the indexer to append or set headers. IDictionary.Add will throw an ArgumentException when attempting to add a duplicate key. (https://aka.ms/aspnet/analyzers) [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj]
+    11 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.39
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll database update --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.Infrastructure.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\Order.Infrastructure.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0\Order.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\Order.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\ --root-namespace Order.Infrastructure --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'Order.Infrastructure'.
+Using startup assembly 'Order.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\API\Order.API'.
+Using root namespace 'Order.Infrastructure'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\Order\Infrastructure\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'OrderDbContext'.
+Finding application service provider in assembly 'Order.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 4 handler types in Order.Application
+Registering: PaymentProcessedIntegrationEvent -> PaymentProcessedIntegrationEventHandler
+Registering: OrderCreatedEvent -> OrderCreatedEventHandler
+Registering: PaymentCompletedEvent -> PaymentCompletedEventHandler
+Registering: WalletChargedEvent -> WalletChargedEventHandler
+Added EventHandlerRegistrationService
+Found 4 handler types in Order.Application
+Skipping duplicate: PaymentProcessedIntegrationEvent -> PaymentProcessedIntegrationEventHandler
+Skipping duplicate: OrderCreatedEvent -> OrderCreatedEventHandler
+Skipping duplicate: PaymentCompletedEvent -> PaymentCompletedEventHandler
+Skipping duplicate: WalletChargedEvent -> WalletChargedEventHandler
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Using context 'OrderDbContext'.
+Finding design-time services referenced by assembly 'Order.API'...
+Finding design-time services referenced by assembly 'Order.Infrastructure'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding IDesignTimeServices implementations in assembly 'Order.API'...
+No design-time services were found.
+infoExecuted DbCommand (488ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [Order];: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (488ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      CREATE DATABASE [Order];
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (238ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [Order] SET READ_COMMITTED_SNAPSHOT ON;
+      END;
+Executed DbCommand (238ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Order] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Migrations[20411]
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DECLARE @result int;
+      EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+      SELECT @result
+Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+      BEGIN
+          CREATE TABLE [__EFMigrationsHistory] (
+              [MigrationId] nvarchar(150) NOT NULL,
+              [ProductVersion] nvarchar(32) NOT NULL,
+              CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+          );
+      END;
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+infoExecuted DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+
+infoExecuted DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20250609095026_InitialCreate'.
+Applying migration '20250609095026_InitialCreate'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Orders] (
+          [Id] uniqueidentifier NOT NULL,
+          [UserId] uniqueidentifier NOT NULL,
+          [OrderNumber] nvarchar(20) NOT NULL,
+          [ServiceType] nvarchar(50) NOT NULL,
+          [FullAmount] decimal(18,2) NOT NULL,
+          [LastStatus] nvarchar(50) NOT NULL,
+          [PassengerCount] int NOT NULL,
+          [HasReturn] bit NOT NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          CONSTRAINT [PK_Orders] PRIMARY KEY ([Id])
+      );
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(20) NOT NULL,
+    [ServiceType] nvarchar(50) NOT NULL,
+    [FullAmount] decimal(18,2) NOT NULL,
+    [LastStatus] nvarchar(50) NOT NULL,
+    [PassengerCount] int NOT NULL,
+    [HasReturn] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id])
+);
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [SavedPassengers] (
+    [Id] bigint NOT NULL IDENTITY,
+    [UserId] uniqueidentifier NOT NULL,
+    [FirstNameEn] nvarchar(100) NOT NULL,
+    [LastNameEn] nvarchar(100) NOT NULL,
+    [FirstNameFa] nvarchar(100) NOT NULL,
+    [LastNameFa] nvarchar(100) NOT NULL,
+    [NationalCode] nvarchar(10) NOT NULL,
+    [PassportNumber] nvarchar(50) NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [Gender] nvarchar(10) NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_SavedPassengers] PRIMARY KEY ([Id])
+);info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [SavedPassengers] (
+          [Id] bigint NOT NULL IDENTITY,
+          [UserId] uniqueidentifier NOT NULL,
+          [FirstNameEn] nvarchar(100) NOT NULL,
+          [LastNameEn] nvarchar(100) NOT NULL,
+          [FirstNameFa] nvarchar(100) NOT NULL,
+          [LastNameFa] nvarchar(100) NOT NULL,
+          [NationalCode] nvarchar(10) NOT NULL,
+          [PassportNumber] nvarchar(50) NULL,
+          [BirthDate] datetime2 NOT NULL,
+          [Gender] nvarchar(10) NOT NULL,
+          [IsActive] bit NOT NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          CONSTRAINT [PK_SavedPassengers] PRIMARY KEY ([Id])
+      );
+
+infoExecuted DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [OrderFlights] (
+    [Id] bigint NOT NULL IDENTITY,
+    [FlightNumber] nvarchar(20) NOT NULL,
+    [ProviderId] nvarchar(50) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [OrderId] uniqueidentifier NOT NULL,
+    [FirstNameEn] nvarchar(100) NOT NULL,
+    [LastNameEn] nvarchar(100) NOT NULL,
+    [FirstNameFa] nvarchar(100) NOT NULL,
+    [LastNameFa] nvarchar(100) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [AgeGroup] nvarchar(20) NOT NULL,
+    [IsIranian] bit NOT NULL,
+    [NationalCode] nvarchar(10) NULL,
+    [PassportNumber] nvarchar(50) NULL,
+    [Gender] nvarchar(10) NOT NULL,
+    [SourceCode] int NOT NULL,
+    [DestinationCode] int NOT NULL,
+    [SourceName] nvarchar(100) NOT NULL,
+    [DestinationName] nvarchar(100) NOT NULL,
+    [TicketDirection] nvarchar(20) NOT NULL,
+    [DepartureTime] datetime2 NOT NULL,
+    [ArrivalTime] datetime2 NOT NULL,
+    [BasePrice] decimal(18,2) NOT NULL,
+    [Tax] decimal(18,2) NOT NULL,
+    [Fee] decimal(18,2) NOT NULL,
+    [PNR] nvarchar(20) NULL,
+    [TicketNumber] nvarchar(50) NULL,
+    [IssueDate] datetime2 NULL,
+    [SeatNumber] nvarchar(10) NULL,
+    CONSTRAINT [PK_OrderFlights] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderFlights_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+);: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [OrderFlights] (
+          [Id] bigint NOT NULL IDENTITY,
+          [FlightNumber] nvarchar(20) NOT NULL,
+          [ProviderId] nvarchar(50) NOT NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          [OrderId] uniqueidentifier NOT NULL,
+          [FirstNameEn] nvarchar(100) NOT NULL,
+          [LastNameEn] nvarchar(100) NOT NULL,
+          [FirstNameFa] nvarchar(100) NOT NULL,
+          [LastNameFa] nvarchar(100) NOT NULL,
+          [BirthDate] datetime2 NOT NULL,
+          [AgeGroup] nvarchar(20) NOT NULL,
+          [IsIranian] bit NOT NULL,
+          [NationalCode] nvarchar(10) NULL,
+          [PassportNumber] nvarchar(50) NULL,
+          [Gender] nvarchar(10) NOT NULL,
+          [SourceCode] int NOT NULL,
+          [DestinationCode] int NOT NULL,
+          [SourceName] nvarchar(100) NOT NULL,
+          [DestinationName] nvarchar(100) NOT NULL,
+          [TicketDirection] nvarchar(20) NOT NULL,
+          [DepartureTime] datetime2 NOT NULL,
+          [ArrivalTime] datetime2 NOT NULL,
+          [BasePrice] decimal(18,2) NOT NULL,
+          [Tax] decimal(18,2) NOT NULL,
+          [Fee] decimal(18,2) NOT NULL,
+          [PNR] nvarchar(20) NULL,
+          [TicketNumber] nvarchar(50) NULL,
+          [IssueDate] datetime2 NULL,
+          [SeatNumber] nvarchar(10) NULL,
+          CONSTRAINT [PK_OrderFlights] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_OrderFlights_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+      );
+
+infoExecuted DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [OrderStatusHistory] (
+    [Id] bigint NOT NULL IDENTITY,
+    [OrderId] uniqueidentifier NOT NULL,
+    [FromStatus] nvarchar(max) NOT NULL,
+    [ToStatus] nvarchar(max) NOT NULL,
+    [Reason] nvarchar(500) NOT NULL,
+    [ChangedBy] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_OrderStatusHistory] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderStatusHistory_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+);: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [OrderStatusHistory] (
+          [Id] bigint NOT NULL IDENTITY,
+          [OrderId] uniqueidentifier NOT NULL,
+          [FromStatus] nvarchar(max) NOT NULL,
+          [ToStatus] nvarchar(max) NOT NULL,
+          [Reason] nvarchar(500) NOT NULL,
+          [ChangedBy] uniqueidentifier NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          CONSTRAINT [PK_OrderStatusHistory] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_OrderStatusHistory_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+      );
+
+infoExecuted DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [OrderTrainCarTransports] (
+    [Id] bigint NOT NULL IDENTITY,
+    [CarNumber] nvarchar(20) NOT NULL,
+    [CarName] nvarchar(100) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [OrderId] uniqueidentifier NOT NULL,
+    [FirstNameEn] nvarchar(100) NOT NULL,
+    [LastNameEn] nvarchar(100) NOT NULL,
+    [FirstNameFa] nvarchar(100) NOT NULL,
+    [LastNameFa] nvarchar(100) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [AgeGroup] int NOT NULL,
+    [IsIranian] bit NOT NULL,
+    [NationalCode] nvarchar(max) NULL,
+    [PassportNumber] nvarchar(max) NULL,
+    [Gender] int NOT NULL,
+    [SourceCode] int NOT NULL,
+    [DestinationCode] int NOT NULL,
+    [SourceName] nvarchar(max) NOT NULL,
+    [DestinationName] nvarchar(max) NOT NULL,
+    [TicketDirection] int NOT NULL,
+    [DepartureTime] datetime2 NOT NULL,
+    [ArrivalTime] datetime2 NOT NULL,
+    [BasePrice] decimal(18,2) NOT NULL,
+    [Tax] decimal(18,2) NOT NULL,
+    [Fee] decimal(18,2) NOT NULL,
+    [PNR] nvarchar(max) NULL,
+    [TicketNumber] nvarchar(max) NULL,
+    [IssueDate] datetime2 NULL,
+    [SeatNumber] nvarchar(max) NULL,
+    CONSTRAINT [PK_OrderTrainCarTransports] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderTrainCarTransports_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+);: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [OrderTrainCarTransports] (
+          [Id] bigint NOT NULL IDENTITY,
+          [CarNumber] nvarchar(20) NOT NULL,
+          [CarName] nvarchar(100) NOT NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          [OrderId] uniqueidentifier NOT NULL,
+          [FirstNameEn] nvarchar(100) NOT NULL,
+          [LastNameEn] nvarchar(100) NOT NULL,
+          [FirstNameFa] nvarchar(100) NOT NULL,
+          [LastNameFa] nvarchar(100) NOT NULL,
+          [BirthDate] datetime2 NOT NULL,
+          [AgeGroup] int NOT NULL,
+          [IsIranian] bit NOT NULL,
+          [NationalCode] nvarchar(max) NULL,
+          [PassportNumber] nvarchar(max) NULL,
+          [Gender] int NOT NULL,
+          [SourceCode] int NOT NULL,
+          [DestinationCode] int NOT NULL,
+          [SourceName] nvarchar(max) NOT NULL,
+          [DestinationName] nvarchar(max) NOT NULL,
+          [TicketDirection] int NOT NULL,
+          [DepartureTime] datetime2 NOT NULL,
+          [ArrivalTime] datetime2 NOT NULL,
+          [BasePrice] decimal(18,2) NOT NULL,
+          [Tax] decimal(18,2) NOT NULL,
+          [Fee] decimal(18,2) NOT NULL,
+          [PNR] nvarchar(max) NULL,
+          [TicketNumber] nvarchar(max) NULL,
+          [IssueDate] datetime2 NULL,
+          [SeatNumber] nvarchar(max) NULL,
+          CONSTRAINT [PK_OrderTrainCarTransports] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_OrderTrainCarTransports_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+      );
+
+infoExecuted DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [OrderTrains] (
+    [Id] bigint NOT NULL IDENTITY,
+    [TrainNumber] nvarchar(20) NOT NULL,
+    [ProviderId] nvarchar(50) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [OrderId] uniqueidentifier NOT NULL,
+    [FirstNameEn] nvarchar(100) NOT NULL,
+    [LastNameEn] nvarchar(100) NOT NULL,
+    [FirstNameFa] nvarchar(100) NOT NULL,
+    [LastNameFa] nvarchar(100) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    [AgeGroup] nvarchar(20) NOT NULL,
+    [IsIranian] bit NOT NULL,
+    [NationalCode] nvarchar(10) NULL,
+    [PassportNumber] nvarchar(50) NULL,
+    [Gender] nvarchar(10) NOT NULL,
+    [SourceCode] int NOT NULL,
+    [DestinationCode] int NOT NULL,
+    [SourceName] nvarchar(100) NOT NULL,
+    [DestinationName] nvarchar(100) NOT NULL,
+    [TicketDirection] nvarchar(20) NOT NULL,
+    [DepartureTime] datetime2 NOT NULL,
+    [ArrivalTime] datetime2 NOT NULL,
+    [BasePrice] decimal(18,2) NOT NULL,
+    [Tax] decimal(18,2) NOT NULL,
+    [Fee] decimal(18,2) NOT NULL,
+    [PNR] nvarchar(20) NULL,
+    [TicketNumber] nvarchar(50) NULL,
+    [IssueDate] datetime2 NULL,
+    [SeatNumber] nvarchar(20) NULL,
+    CONSTRAINT [PK_OrderTrains] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderTrains_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+);: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [OrderTrains] (
+          [Id] bigint NOT NULL IDENTITY,
+          [TrainNumber] nvarchar(20) NOT NULL,
+          [ProviderId] nvarchar(50) NOT NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          [OrderId] uniqueidentifier NOT NULL,
+          [FirstNameEn] nvarchar(100) NOT NULL,
+          [LastNameEn] nvarchar(100) NOT NULL,
+          [FirstNameFa] nvarchar(100) NOT NULL,
+          [LastNameFa] nvarchar(100) NOT NULL,
+          [BirthDate] datetime2 NOT NULL,
+          [AgeGroup] nvarchar(20) NOT NULL,
+          [IsIranian] bit NOT NULL,
+          [NationalCode] nvarchar(10) NULL,
+          [PassportNumber] nvarchar(50) NULL,
+          [Gender] nvarchar(10) NOT NULL,
+          [SourceCode] int NOT NULL,
+          [DestinationCode] int NOT NULL,
+          [SourceName] nvarchar(100) NOT NULL,
+          [DestinationName] nvarchar(100) NOT NULL,
+          [TicketDirection] nvarchar(20) NOT NULL,
+          [DepartureTime] datetime2 NOT NULL,
+          [ArrivalTime] datetime2 NOT NULL,
+          [BasePrice] decimal(18,2) NOT NULL,
+          [Tax] decimal(18,2) NOT NULL,
+          [Fee] decimal(18,2) NOT NULL,
+          [PNR] nvarchar(20) NULL,
+          [TicketNumber] nvarchar(50) NULL,
+          [IssueDate] datetime2 NULL,
+          [SeatNumber] nvarchar(20) NULL,
+          CONSTRAINT [PK_OrderTrains] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_OrderTrains_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+      );
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [OrderWalletTransactions] (
+          [Id] bigint NOT NULL IDENTITY,
+          [OrderId] uniqueidentifier NOT NULL,
+          [TransactionId] bigint NOT NULL,
+          [Type] nvarchar(max) NOT NULL,
+          [Amount] decimal(18,2) NOT NULL,
+          [CreatedAt] datetime2 NOT NULL,
+          [UpdatedAt] datetime2 NOT NULL,
+          [IsDeleted] bit NOT NULL,
+          CONSTRAINT [PK_OrderWalletTransactions] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_OrderWalletTransactions_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+      );
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [OrderWalletTransactions] (
+    [Id] bigint NOT NULL IDENTITY,
+    [OrderId] uniqueidentifier NOT NULL,
+    [TransactionId] bigint NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_OrderWalletTransactions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderWalletTransactions_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE
+);
+infoExecuted DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderFlights_OrderId] ON [OrderFlights] ([OrderId]);: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderFlights_OrderId] ON [OrderFlights] ([OrderId]);
+
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderFlights_TicketNumber] ON [OrderFlights] ([TicketNumber]);info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderFlights_TicketNumber] ON [OrderFlights] ([TicketNumber]);
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX [IX_Orders_OrderNumber] ON [Orders] ([OrderNumber]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Orders_OrderNumber] ON [Orders] ([OrderNumber]);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderStatusHistory_CreatedAt] ON [OrderStatusHistory] ([CreatedAt]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderStatusHistory_CreatedAt] ON [OrderStatusHistory] ([CreatedAt]);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderStatusHistory_OrderId] ON [OrderStatusHistory] ([OrderId]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderStatusHistory_OrderId] ON [OrderStatusHistory] ([OrderId]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderTrainCarTransports_OrderId] ON [OrderTrainCarTransports] ([OrderId]);info
+: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderTrainCarTransports_OrderId] ON [OrderTrainCarTransports] ([OrderId]);
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderTrains_OrderId] ON [OrderTrains] ([OrderId]);info
+: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderTrains_OrderId] ON [OrderTrains] ([OrderId]);
+infoExecuted DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderTrains_TicketNumber] ON [OrderTrains] ([TicketNumber]);: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderTrains_TicketNumber] ON [OrderTrains] ([TicketNumber]);
+
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderWalletTransactions_OrderId] ON [OrderWalletTransactions] ([OrderId]);info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderWalletTransactions_OrderId] ON [OrderWalletTransactions] ([OrderId]);
+
+infoExecuted DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_OrderWalletTransactions_TransactionId] ON [OrderWalletTransactions] ([TransactionId]);: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_OrderWalletTransactions_TransactionId] ON [OrderWalletTransactions] ([TransactionId]);
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX [IX_SavedPassengers_UserId_NationalCode] ON [SavedPassengers] ([UserId], [NationalCode]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_SavedPassengers_UserId_NationalCode] ON [SavedPassengers] ([UserId], [NationalCode]);
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250609095026_InitialCreate', N'9.0.5');info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+      VALUES (N'20250609095026_InitialCreate', N'9.0.5');
+
+infoExecuted DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DECLARE @result int;
+      EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+      SELECT @result
+
+Done.
+=== Migrating PaymentGateway ===
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj'.
+Writing 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\obj\PaymentGateway.API.csproj.EntityFrameworkCore.targets'...
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpkt3iju.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpiaqu1w.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Models\WebhookLog.cs(59,21): warning CS0108: 'WebhookLog.CreatedAt' hides inherited member 'BaseEntity<Guid>.CreatedAt'. Use the new keyword if hiding was intended. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Providers\Zibal\ZibalProvider.cs(230,29): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Features\Command\VerifyPayment\VerifyPaymentHandler.cs(147,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Endpoints\WebhookEndpoint.cs(162,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+
+Build succeeded.
+
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Models\WebhookLog.cs(59,21): warning CS0108: 'WebhookLog.CreatedAt' hides inherited member 'BaseEntity<Guid>.CreatedAt'. Use the new keyword if hiding was intended. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Providers\Zibal\ZibalProvider.cs(230,29): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Features\Command\VerifyPayment\VerifyPaymentHandler.cs(147,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Endpoints\WebhookEndpoint.cs(162,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+    4 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.96
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll migrations add InitialCreate --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\ --root-namespace PaymentGateway.API --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'PaymentGateway.API'.
+Using startup assembly 'PaymentGateway.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API'.
+Using root namespace 'PaymentGateway.API'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'PaymentDbContext'.
+Finding application service provider in assembly 'PaymentGateway.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 0 handler types in PaymentGateway.API
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Using context 'PaymentDbContext'.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10400]
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[20601]
+      The 'PaymentStatus' property 'Status' on entity type 'Payment' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'PaymentStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+Finding design-time services referenced by assembly 'PaymentGateway.API'...
+Finding design-time services referenced by assembly 'PaymentGateway.API'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding IDesignTimeServices implementations in assembly 'PaymentGateway.API'...
+No design-time services were found.
+Writing migration to 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Migrations\20250609095046_InitialCreate.cs'.
+Writing model snapshot to 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Migrations\PaymentDbContextModelSnapshot.cs'.
+Done. To undo this action, use 'ef migrations remove'
+Using project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj'.
+Using startup project 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj'.
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpvsbrha.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj
+dotnet msbuild /target:GetEFProjectMetadata /property:EFProjectMetadataFile=C:\Users\Administrator\AppData\Local\Temp\tmpr1im4n.tmp /verbosity:quiet /nologo C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj
+Build started...
+dotnet build C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj /verbosity:quiet /nologo /p:PublishAot=false
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Models\WebhookLog.cs(59,21): warning CS0108: 'WebhookLog.CreatedAt' hides inherited member 'BaseEntity<Guid>.CreatedAt'. Use the new keyword if hiding was intended. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Providers\Zibal\ZibalProvider.cs(230,29): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Endpoints\WebhookEndpoint.cs(162,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Features\Command\VerifyPayment\VerifyPaymentHandler.cs(147,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+
+Build succeeded.
+
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Models\WebhookLog.cs(59,21): warning CS0108: 'WebhookLog.CreatedAt' hides inherited member 'BaseEntity<Guid>.CreatedAt'. Use the new keyword if hiding was intended. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Providers\Zibal\ZibalProvider.cs(230,29): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Endpoints\WebhookEndpoint.cs(162,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\Features\Command\VerifyPayment\VerifyPaymentHandler.cs(147,26): warning CS0168: The variable 'ex' is declared but never used [C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj]
+    4 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.81
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.deps.json --additionalprobingpath C:\Users\Administrator\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.runtimeconfig.json C:\Users\Administrator\.dotnet\tools\.store\dotnet-ef\9.0.5\dotnet-ef\9.0.5\tools\net8.0\any\tools\netcoreapp2.0\any\ef.dll database update --assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.dll --project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj --startup-assembly C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\PaymentGateway.API.dll --startup-project C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\PaymentGateway.API.csproj --project-dir C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\ --root-namespace PaymentGateway.API --language C# --framework net9.0 --nullable --working-dir C:\Users\Administrator\Desktop\Source\SafarMall --verbose
+Using assembly 'PaymentGateway.API'.
+Using startup assembly 'PaymentGateway.API'.
+Using application base 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0'.
+Using working directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API'.
+Using root namespace 'PaymentGateway.API'.
+Using project directory 'C:\Users\Administrator\Desktop\Source\SafarMall\src\Services\PaymentGateway\PaymentGateway.API\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Finding DbContext classes in the project...
+Found DbContext 'PaymentDbContext'.
+Finding application service provider in assembly 'PaymentGateway.API'...
+Finding Microsoft.Extensions.Hosting service provider...
+Found 0 handler types in PaymentGateway.API
+Added EventHandlerRegistrationService
+Using application service provider from Microsoft.Extensions.Hosting.
+Using context 'PaymentDbContext'.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10400]
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[20601]
+      The 'PaymentStatus' property 'Status' on entity type 'Payment' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'PaymentStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+Finding design-time services referenced by assembly 'PaymentGateway.API'...
+Finding design-time services referenced by assembly 'PaymentGateway.API'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding IDesignTimeServices implementations in assembly 'PaymentGateway.API'...
+No design-time services were found.
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [paymentgateway].[Payments] (
+          [Id] uniqueidentifier NOT NULL,
+          [PaymentId] nvarchar(50) NOT NULL,
+          [GatewayType] int NOT NULL,
+          [GatewayReference] nvarchar(100) NOT NULL,
+          [Amount] decimal(18,2) NOT NULL,
+          [Description] nvarchar(500) NOT NULL,
+          [CallbackUrl] nvarchar(2000) NOT NULL,
+          [OrderId] nvarchar(100) NULL,
+          [Status] int NOT NULL DEFAULT 1,
+          [TransactionId] nvarchar(100) NULL,
+          [TrackingCode] nvarchar(100) NULL,
+          [ErrorMessage] nvarchar(1000) NULL,
+          [ErrorCode] nvarchar(50) NULL,
+          [PaidAt] datetime2(7) NULL,
+          [ExpiresAt] datetime2(7) NOT NULL,
+          [RetryCount] int NOT NULL DEFAULT 0,
+          [MaxRetries] int NOT NULL DEFAULT 3,
+          [CreatedAt] datetime2(7) NOT NULL,
+          [UpdatedAt] datetime2(7) NOT NULL,
+          [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+          CONSTRAINT [PK_Payments] PRIMARY KEY ([Id])
+      );
+Failed executing DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [paymentgateway].[Payments] (
+    [Id] uniqueidentifier NOT NULL,
+    [PaymentId] nvarchar(50) NOT NULL,
+    [GatewayType] int NOT NULL,
+    [GatewayReference] nvarchar(100) NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Description] nvarchar(500) NOT NULL,
+    [CallbackUrl] nvarchar(2000) NOT NULL,
+    [OrderId] nvarchar(100) NULL,
+    [Status] int NOT NULL DEFAULT 1,
+    [TransactionId] nvarchar(100) NULL,
+    [TrackingCode] nvarchar(100) NULL,
+    [ErrorMessage] nvarchar(1000) NULL,
+    [ErrorCode] nvarchar(50) NULL,
+    [PaidAt] datetime2(7) NULL,
+    [ExpiresAt] datetime2(7) NOT NULL,
+    [RetryCount] int NOT NULL DEFAULT 0,
+    [MaxRetries] int NOT NULL DEFAULT 3,
+    [CreatedAt] datetime2(7) NOT NULL,
+    [UpdatedAt] datetime2(7) NOT NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Payments] PRIMARY KEY ([Id])
+);
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'Payments' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.Execute(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.<>c.<ExecuteNonQuery>b__3_1(DbContext _, ValueTuple`6 s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean commitTransaction, Nullable`1 isolationLevel)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementation(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c.<Migrate>b__20_1(DbContext c, ValueTuple`4 s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:c5906da5-c494-4d84-8bb2-a7f7b25a9251
+Error Number:2714,State:6,Class:16
+There is already an object named 'Payments' in the database.
+=== All Migrations Done ===

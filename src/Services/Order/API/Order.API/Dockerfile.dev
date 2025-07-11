@@ -1,0 +1,33 @@
+# Development Dockerfile for Order
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS development
+
+WORKDIR /app
+
+# Install development tools
+RUN apt-get update && apt-get install -y \
+    curl \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy project files for restore
+COPY ["src/Services/Order/API/Order.API/Order.API.csproj", "src/Services/Order/API/Order.API/"]
+COPY ["src/Services/Order/Core/Application/Order.Application.csproj", "src/Services/Order/Core/Application/"]
+COPY ["src/Services/Order/Infrastructure/Order.Infrastructure.csproj", "src/Services/Order/Infrastructure/"]
+COPY ["src/Services/Order/Core/Domain/Order.Domain.csproj", "src/Services/Order/Core/Domain/"]
+COPY ["src/BuildingBlocks/BuildingBlocks/BuildingBlocks.csproj", "src/BuildingBlocks/BuildingBlocks/"]
+COPY ["src/BuildingBlocks.Messaging/BuildingBlocks.Messaging/BuildingBlocks.Messaging.csproj", "src/BuildingBlocks.Messaging/BuildingBlocks.Messaging/"]
+
+# Restore packages
+RUN dotnet restore "src/Services/Order/API/Order.API/Order.API.csproj"
+
+# Copy all source code (will be overridden by volume mounts)
+COPY . .
+
+# Set working directory
+WORKDIR /app/src/Services/Order/API/Order.API
+
+# Expose ports
+EXPOSE 8080
+
+# Development command with hot reload
+CMD ["dotnet", "watch", "run", "--urls", "http://+:8080"]

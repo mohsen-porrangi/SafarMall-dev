@@ -1,0 +1,8 @@
+# ابتدا فقط SQL Server اجرا کنید
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=SafarMall123!" -p 1433:1433 -d --name sqlserver mcr.microsoft.com/mssql/server:2022-latest
+
+# Migration جدید را اجرا کنید
+cd src\Services\UserManagement\UserManagement.API
+dotnet ef database update
+
+# بقیه سرویس‌ها...

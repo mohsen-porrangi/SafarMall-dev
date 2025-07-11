@@ -1,0 +1,33 @@
+# Development Dockerfile for Wallet
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS development
+
+WORKDIR /app
+
+# Install development tools
+RUN apt-get update && apt-get install -y \
+    curl \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy project files for restore
+COPY ["src/Services/Wallet/API/Wallet.API/Wallet.API.csproj", "src/Services/Wallet/API/Wallet.API/"]
+COPY ["src/Services/Wallet/Core/Application/Wallet.Application.csproj", "src/Services/Wallet/Core/Application/"]
+COPY ["src/Services/Wallet/Infrastructure/Wallet.Infrastructure.csproj", "src/Services/Wallet/Infrastructure/"]
+COPY ["src/Services/Wallet/Core/Domain/Wallet.Domain.csproj", "src/Services/Wallet/Core/Domain/"]
+COPY ["src/BuildingBlocks/BuildingBlocks/BuildingBlocks.csproj", "src/BuildingBlocks/BuildingBlocks/"]
+COPY ["src/BuildingBlocks.Messaging/BuildingBlocks.Messaging/BuildingBlocks.Messaging.csproj", "src/BuildingBlocks.Messaging/BuildingBlocks.Messaging/"]
+
+# Restore packages
+RUN dotnet restore "src/Services/Wallet/API/Wallet.API/Wallet.API.csproj"
+
+# Copy all source code (will be overridden by volume mounts)
+COPY . .
+
+# Set working directory
+WORKDIR /app/src/Services/Wallet/API/Wallet.API
+
+# Expose ports
+EXPOSE 8080
+
+# Development command with hot reload
+CMD ["dotnet", "watch", "run", "--urls", "http://+:8080"]

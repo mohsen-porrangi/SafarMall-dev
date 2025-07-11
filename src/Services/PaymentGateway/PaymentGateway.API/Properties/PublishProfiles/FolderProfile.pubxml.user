@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Mohsen\Desktop\source\repos\SafarMallMicroservices\src\Services\PaymentGateway\PaymentGateway.API\bin\Debug\net9.0\publish\</_PublishTargetUrl>
+    <History>True|2025-07-07T10:03:54.9318883Z||;True|2025-07-06T20:33:24.3828604+03:30||;False|2025-07-06T20:28:22.0538900+03:30||;False|2025-07-06T20:21:43.3007541+03:30||;True|2025-07-06T02:53:28.4285864+03:30||;True|2025-07-06T02:29:02.3199647+03:30||;True|2025-07-05T15:05:22.9564661+03:30||;True|2025-07-05T12:02:01.2245532+03:30||;True|2025-07-04T16:56:07.2144562+03:30||;True|2025-07-04T16:25:36.7809227+03:30||;True|2025-07-04T11:24:33.5257751+03:30||;True|2025-07-02T14:01:55.8301122+03:30||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
